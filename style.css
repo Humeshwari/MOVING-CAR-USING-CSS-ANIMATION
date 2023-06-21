@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(sky.jpg);
+    background-size: cover;
+    position:relative ;
+    background-position: center;
+    overflow-x: hidden;
+}
+.highway{
+    height:100px;
+    width: 500%;
+    display: block;
+    background-image: url(road.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: highway 5s linear infinite;
+}
+@keyframes highway{
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+.city{
+    height: 314px;
+    width: 500%;
+    background-image: url(city.png);
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+@keyframes city{
+    100%{
+        transform: translateX(-1400px);
+    }
+}
+ .bird {
+    background-image: url(bird.svg);
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    animation-name: fly-cycle;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+}
+.bird1{
+    animation-duration: 5s;
+    animation-delay: -.5s;
+}
+.bird2{
+    animation-duration: 9s;
+    animation-delay: -.7s;
+}
+.bird3{
+    animation-duration: 13s;
+    animation-delay: -.9s;
+}
+.bird4{
+    animation-duration: 16s;
+    animation-delay: -.11s;
+} 
+.car{
+    width: 413px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: car 2s linear infinite;
+}
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    75%{
+        transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+/*.wheel{
+    width: 5%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    position: relative;
+    z-index: 1;
+}*/
+
+.wheel1 img{
+    width: 94px;
+    left: 508px;
+    position: relative;
+    top: 470px;
+    animation: wheel1 1s linear infinite;
+}
+@keyframes wheel1{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.wheel2 img{
+    width: 96px;
+    left: 755px;
+    position: relative;
+    top: 370px;
+    animation: wheel2 1s linear infinite;
+}
+@keyframes wheel2{
+    100%{
+        transform: rotate(360deg);
+    }
+}
